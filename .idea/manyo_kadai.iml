@@ -216,6 +216,27 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="better_errors (vbundled(2.9.1)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/.github" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/gemfiles" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/.github" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/gemfiles" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/.github" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/better_errors-2.9.1/gemfiles" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="bindex (vbundled(0.8.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
@@ -233,6 +254,30 @@
         <excluded>
           <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext" />
           <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bindex-0.8.1/test" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="binding_of_caller (vbundled(0.8.0)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/test" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/examples" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/test" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/examples" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/test" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/binding_of_caller-0.8.0/examples" />
         </excluded>
       </library>
     </orderEntry>
@@ -363,6 +408,24 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="coderay (vbundled(1.1.3)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/coderay-1.1.3/bin" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/coderay-1.1.3/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/coderay-1.1.3/bin" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/coderay-1.1.3/lib" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/coderay-1.1.3/bin" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="coffee-rails (vbundled(4.2.2)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
@@ -430,6 +493,27 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/crass-1.0.6/lib" />
         </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="debug_inspector (vbundled(0.0.3)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/test" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/test" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/debug_inspector-0.0.3/test" />
+        </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -813,6 +897,45 @@
         <excluded>
           <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pg-1.2.3/ext" />
           <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pg-1.2.3/spec" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pry (vbundled(0.13.1)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-0.13.1/bin" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-0.13.1/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-0.13.1/bin" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-0.13.1/lib" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-0.13.1/bin" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pry-rails (vbundled(0.3.9)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/spec" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/scenarios" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/spec" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/scenarios" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/spec" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/pry-rails-0.3.9/scenarios" />
         </excluded>
       </library>
     </orderEntry>
