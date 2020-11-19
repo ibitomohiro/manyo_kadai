@@ -31,7 +31,7 @@ class TasksController < ApplicationController
     if @task.save
     # binding.pry
     flash[:notice] = 'Taskの投稿に成功しました！'
-    redirect_to new_task_path
+    redirect_to tasks_path
     else
       render :new
     end
