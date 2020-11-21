@@ -1,27 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby version  2.6.5
+- Rails version 5.2.4.4
+- PostgreSQL    12.3
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-| TH1 | TH2 |
+## Task モデル
+| テーブル | データ型 |
 ----|---- 
-| TD1 | TD3 |
-| TD2 | TD4 |
+| title | string |
+| content | text |
