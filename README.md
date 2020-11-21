@@ -7,5 +7,21 @@
 ## Task モデル
 | テーブル | データ型 |
 ----|---- 
+|  id   | iteger |
 | title | string |
 | content | text |
+|dead_line | datetime |
+
+## User モデル
+| テーブル | データ型 |
+----|---- 
+| id | integer  |
+| name | string |
+|e-mail | string |
+| password_digest | string |
+
+## Label モデル
+| テーブル | データ型 |
+----|----
+|user_id | integer |
+| task_id | integer |
