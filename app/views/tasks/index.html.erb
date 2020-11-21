@@ -16,9 +16,9 @@
     <tr>
       <td><%= task.title %></td>
       <td><%= task.content %></td>
-      <td><%= link_to '#', task %></td>
-      <td><%= link_to '#', edit_task_path(task) %></td>
-      <td><%= link_to '#', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Task詳細', task_path(task.id) %></td>
+      <td><%= link_to 'Task 編集', edit_task_path(task.id), data: {confirm: 'Are you sure to edit task?'} %></td>
+      <td><%= link_to 'delete', task_path(task.id), method: :delete, data: { confirm: 'Are you sure to delete task?' } %></td>
     </tr>
   <% end %>
   </tbody>
