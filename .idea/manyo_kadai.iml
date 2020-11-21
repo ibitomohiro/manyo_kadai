@@ -185,24 +185,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="archive-zip (vbundled(0.12.0)) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="4" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/archive-zip-0.12.0/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/archive-zip-0.12.0/spec" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/archive-zip-0.12.0/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/archive-zip-0.12.0/spec" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/archive-zip-0.12.0/spec" />
-        </excluded>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="arel (vbundled(9.0.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
@@ -380,30 +362,6 @@
         </SOURCES>
         <excluded>
           <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/childprocess-3.0.0/spec" />
-        </excluded>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="chromedriver-helper (vbundled(2.1.1)) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="4" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/bin" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/spec" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/concourse" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/bin" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/spec" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/concourse" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/bin" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/spec" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/concourse" />
         </excluded>
       </library>
     </orderEntry>
@@ -661,24 +619,6 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/i18n-1.8.5/lib" />
         </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="io-like (vbundled(0.3.1)) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="4" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/io-like-0.3.1/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/io-like-0.3.1/spec" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/io-like-0.3.1/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/io-like-0.3.1/spec" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/io-like-0.3.1/spec" />
-        </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -1273,46 +1213,46 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rspec-core (vbundled(3.10.0)) [path][gem]" type="rubylib">
+      <library name="rspec-core (vbundled(3.9.3)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.10.0/exe" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.9.3/exe" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.9.3/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.10.0/exe" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.9.3/exe" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.9.3/lib" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.10.0/exe" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-core-3.9.3/exe" />
         </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rspec-expectations (vbundled(3.10.0)) [path][gem]" type="rubylib">
+      <library name="rspec-expectations (vbundled(3.9.4)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-expectations-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-expectations-3.9.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-expectations-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-expectations-3.9.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rspec-mocks (vbundled(3.10.0)) [path][gem]" type="rubylib">
+      <library name="rspec-mocks (vbundled(3.9.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-mocks-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-mocks-3.9.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-mocks-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-mocks-3.9.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -1330,15 +1270,15 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rspec-support (vbundled(3.10.0)) [path][gem]" type="rubylib">
+      <library name="rspec-support (vbundled(3.9.4)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-support-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-support-3.9.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-support-3.10.0/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/rspec-support-3.9.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
