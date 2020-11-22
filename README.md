@@ -25,3 +25,12 @@
 ----|----
 |user_id | integer |
 | task_id | integer |
+
+## herokuへのデプロイの方法
+デプロイしたいアプリへのディレクトリへ移動する
+1. % heroku create　                                (コマンドでherokuへ新しいアプリの作成)
+2. % heroku buildpacks:set heroku/ruby             (Rubyのbuildpackの追加)
+3. % heroku buildpacks:add --index 1 heroku/nodejs (node.jsのbuildpackの追加)
+4. % git push heroku master (herokuへデプロイ)
+5. % git run rails db:migrate (マイグレーションの実行)
+6. % heroku open (アプリを開く)
