@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= t('view_title.models.task.index') %> </h1>
+<%= link_to "終了期限でソートする", tasks_path(sort_expired: "true") %>
+<%= link_to "投稿順にソートする", tasks_path(sort_expired: "false") %>
 
 <table>
   <thead>
