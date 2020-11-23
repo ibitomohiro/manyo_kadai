@@ -1,0 +1,32 @@
+ja:
+  view_title:
+    models:
+      task:
+        index: タスク一覧
+        new: 新規タスク
+  link_to:
+    models:
+      task:
+        index: タスク一覧
+        new: Task作成
+        show: Task詳細
+        edit: Task編集
+        delete: Task削除
+        back: 戻る
+
+  activerecord:
+    models:
+      task: タスク
+      user: ユーザー
+    attributes:
+      task:
+        title: タイトル
+        content: 内容
+      user:
+        title: タイトル
+        name: 名前
+        email: メールアドレス
+        current_password: 現在のパスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶
