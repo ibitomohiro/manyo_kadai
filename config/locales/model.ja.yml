@@ -13,6 +13,9 @@ ja:
         edit: Task編集
         delete: Task削除
         back: 戻る
+        dead_line: 終了期順が近い順番に並び替える
+        created_at: 投稿時間が新しい順番に並び替える
+
 
   activerecord:
     models:
@@ -22,6 +25,8 @@ ja:
       task:
         title: タイトル
         content: 内容
+        dead_line: 期限
+        created_at: 投稿時間
       user:
         title: タイトル
         name: 名前
