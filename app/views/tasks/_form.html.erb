@@ -23,5 +23,10 @@
     <%= f.label :dead_line %>
     <%= f.datetime_select :dead_line %>
   </div>
+
+  <div class ="status">
+    <%= f.label :status, "ステータス" %>
+    <%= f.select :status, ["未着手", "着手中", "完了"] %>
+  </div>
   <%= f.submit %>
 <% end %>

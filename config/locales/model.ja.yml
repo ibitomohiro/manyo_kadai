@@ -27,6 +27,7 @@ ja:
         content: 内容
         dead_line: 期限
         created_at: 投稿時間
+        status: ステータス
       user:
         title: タイトル
         name: 名前

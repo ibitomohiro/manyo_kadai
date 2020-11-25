@@ -24,7 +24,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      flash[:notice] = "Taskの編集としました！"
+      flash[:notice] = "Taskの編集をしました！"
       redirect_to tasks_path
     else
       render :edit
@@ -51,7 +51,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :content, :dead_line)
+    params.require(:task).permit(:title, :content, :dead_line, :status)
   end
 
   def set_task
