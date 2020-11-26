@@ -7,7 +7,15 @@ class TasksController < ApplicationController
         @tasks = Task.over
       elsif params[:sort_expired] == "false"
         @tasks = Task.recent
+        binding.pry
       end
+    if params[:search_title].present? && params[:search_status].present?
+      @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%").where(status: params[:search_status])
+    elsif params[:search_title].present?
+      @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%")
+    elsif params[:search_status].present?
+      @tasks = Task.where(status: params[:search_status])
+    end
   end
 
   def new
