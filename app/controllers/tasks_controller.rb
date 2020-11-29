@@ -10,11 +10,14 @@ class TasksController < ApplicationController
         binding.pry
       end
     if params[:search_title].present? && params[:search_status].present?
-      @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%").where(status: params[:search_status])
+      @tasks = Task.search_title(params[:search_title]).search_status(params[:search_status])
+      # @tasks = Task.where('title LIKE ?', "%#{params[:title]}%").where(status: params[:search_status])
     elsif params[:search_title].present?
-      @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%")
+      @tasks = Task.search_title(params[:search_title])
+      # @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%")
     elsif params[:search_status].present?
-      @tasks = Task.where(status: params[:search_status])
+      @tasks = Task.search_status(params[:search_status])
+      # @tasks = Task.where(status: params[:search_status])
     end
   end
 
