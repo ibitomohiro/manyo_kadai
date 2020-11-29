@@ -7,7 +7,6 @@ class TasksController < ApplicationController
         @tasks = Task.over
       elsif params[:sort_expired] == "false"
         @tasks = Task.recent
-        binding.pry
       end
     if params[:search_title].present? && params[:search_status].present?
       @tasks = Task.search_title(params[:search_title]).search_status(params[:search_status])

@@ -44,6 +44,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
