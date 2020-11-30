@@ -6,7 +6,7 @@ FactoryBot.define do
     title { 'test_title_1' }
     content { 'test_content_1' }
     dead_line { DateTime.now }
-    status { 'finished' }
+    status { '完了' }
   end
   # 作成するテストデータの名前を「second_task」とします
   # （存在しないクラス名の名前をつける場合、オプションで「このクラスのテストデータにしてください」と指定します）
@@ -14,12 +14,12 @@ FactoryBot.define do
     title { 'test_title_2' }
     content { 'test_content_2' }
     dead_line {DateTime.now.tomorrow }
-    status { 'working_on' }
+    status { '着手中' }
   end
   factory :third_task, class: Task do
     title { 'test_title_3' }
     content { 'test_content_3' }
     dead_line { DateTime.now + 3.days }
-    status { 'not_started' }
+    status { '未着手' }
   end
 end
