@@ -1,10 +1,11 @@
 require 'rails_helper'
 RSpec.describe 'タスク管理機能', type: :system do
-  task1 = FactoryBot.create(:task)
-  task2 = FactoryBot.create(:second_task)
-  task3 = FactoryBot.create(:third_task)
+
   before do
     visit tasks_path
+    @task1 = FactoryBot.create(:task)
+    @task2 = FactoryBot.create(:second_task)
+    @task3 = FactoryBot.create(:third_task)
   end
   describe '新規作成機能' do
     context 'タスクを新規作成した場合' do
@@ -29,6 +30,7 @@ RSpec.describe 'タスク管理機能', type: :system do
       expect(task_list[0]).to have_content 'test_content_3'
     end
     it 'タスクの期限が近い順に並び替え' do
+      visit current_path
       click_on '終了期順が近い順番に並び替える'
       task_list = all('.task_row')
       expect(task_list[0]).to have_content 'test_content_1'
