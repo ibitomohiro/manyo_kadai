@@ -28,5 +28,10 @@
     <%= f.label :status, "ステータス" %>
     <%= f.select :status, ["未着手", "着手中", "完了"] %>
   </div>
+
+  <div class="priority">
+    <%= f.label :priority, "priority" %>
+    <%= f.select :priority, ["高", "中","低"] %>
+  </div>
   <%= f.submit %>
 <% end %>
