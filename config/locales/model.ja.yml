@@ -15,6 +15,11 @@ ja:
         back: 戻る
         dead_line: 終了期順が近い順番に並び替える
         created_at: 投稿時間が新しい順番に並び替える
+  sort:
+    search_status: ステータスで検索
+    search_title: タイトルで検索
+    search_priority: 優先順位で検索
+
 
 
   activerecord:
@@ -28,6 +33,7 @@ ja:
         dead_line: 期限
         created_at: 投稿時間
         status: ステータス
+        priority: 優先順位
       user:
         title: タイトル
         name: 名前
