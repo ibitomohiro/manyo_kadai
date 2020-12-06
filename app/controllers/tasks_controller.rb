@@ -3,21 +3,30 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
-      if params[:sort_expired] == "true"
-        @tasks = Task.over
-      elsif params[:sort_expired] == "false"
-        @tasks = Task.recent
-      end
-    if params[:search_title].present? && params[:search_status].present?
-      @tasks = Task.search_title(params[:search_title]).search_status(params[:search_status])
-      # @tasks = Task.where('title LIKE ?', "%#{params[:title]}%").where(status: params[:search_status])
-    elsif params[:search_title].present?
-      @tasks = Task.search_title(params[:search_title])
-      # @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%")
-    elsif params[:search_status].present?
-      @tasks = Task.search_status(params[:search_status])
-      # @tasks = Task.where(status: params[:search_status])
+    if params[:sort_expired] == "true"
+      @tasks = Task.over
+    elsif params[:sort_expired] == "false"
+      @tasks = Task.recent
     end
+
+    if params[:task].present?
+      @tasks = @tasks.search_title(params[:task][:title])
+      @tasks = @tasks.search_status(params[:task][:status])
+      if params[:task][:priority].present?
+        @tasks = @tasks.search_priority(params[:task][:priority])
+      end
+    end
+
+    # if params[:search_title].present? && params[:search_status].present?
+    #   @tasks = Task.search_title(params[:search_title]).search_status(params[:search_status])
+    #
+    # elsif params[:search_title].present?
+    #   @tasks = Task.search_title(params[:search_title])
+    #   # @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%")
+    # elsif params[:search_status].present?
+    #   @tasks = Task.search_status(params[:search_status])
+    #   # @tasks = Task.where(status: params[:search_status])
+    # end
   end
 
   def new

@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 <h4>Taskを検索する</h4>
-<p><%=form_with url: tasks_path, method: :get, local: true do |f| %></p>
+<p><%=form_with(model: Task.new, url: tasks_path, method: :get, local: true) do |f| %></p>
     <%= f.label :search_status, t('sort.search_status') %><br>
-    <%= f.select :search_status, ["未着手", "着手中", "完了"], {include_blank:true} %><br>
+    <%= f.select :status, ["未着手", "着手中", "完了"], {include_blank:true} %><br>
     <%= f.label :search_title, t('sort.search_title') %><br>
-    <%= f.text_field :search_title %><br>
+    <%= f.text_field :title %><br>
     <%= f.label :priority, t('sort.search_priority') %><br>
     <%= f.select :priority, ["高", "中", "低"] %>
     <%= f.submit "検索する" %>
