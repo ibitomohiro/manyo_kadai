@@ -6,7 +6,7 @@
     <%= f.label :search_title, t('sort.search_title') %><br>
     <%= f.text_field :title %><br>
     <%= f.label :priority, t('sort.search_priority') %><br>
-    <%= f.select :priority, ["高", "中", "低"] %>
+    <%= f.select :priority, ["高", "中", "低"], {include_blank:true} %>
     <%= f.submit "検索する" %>
 <% end %>
 
@@ -43,7 +43,7 @@
   <% end %>
   </tbody>
 </table>
-<%= paginate(@tasks) %>
 <br>
 
 <%= link_to t('link_to.models.task.new'), new_task_path %>
+<%= paginate @tasks %>
