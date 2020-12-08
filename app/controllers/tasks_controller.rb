@@ -3,6 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+    @tasks = Task.page(params[:page]).per(5)
     if params[:sort_expired] == "true"
       @tasks = Task.over
     elsif params[:sort_expired] == "false"
