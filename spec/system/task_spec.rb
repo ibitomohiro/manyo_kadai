@@ -39,7 +39,8 @@ RSpec.describe 'タスク管理機能', type: :system do
   describe '検索機能' do
     context 'タイトルであいまい検索をした場合' do
       it "検索キーワードを含むタスクが絞り込まれる" do
-        fill_in :title, with: 'test_title_1'
+        visit tasks_path
+        fill_in :task_title, with: 'test_title_1'
         click_on "検索する"
         task_list = all('.task_row')
         expect(page).to have_content 'test_content_1'
@@ -48,15 +49,15 @@ RSpec.describe 'タスク管理機能', type: :system do
     end
     context 'ステータス検索をした場合' do
       it "ステータスに完全一致するタスクが絞り込まれる" do
-        select '着手中', from: :search_status
+        select '着手中', from: :task_status
         click_on "検索する"
         expect(page).to have_content 'test_content_2'
       end
     end
     context 'タイトルのあいまい検索とステータス検索をした場合' do
       it "検索キーワードをタイトルに含み、かつステータスに完全一致するタスク絞り込まれる" do
-        fill_in :title, with: 'test_title_3'
-        select '未着手', from: :search_status
+        fill_in :task_title, with: 'test_title_3'
+        select '未着手', from: :task_status
         click_on "検索する"
         expect(page).to have_content 'test_content_3'
       end
