@@ -2,12 +2,12 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
-    @tasks = Task.all
+    # @tasks = Task.all
     @tasks = Task.page(params[:page]).per(5)
     if params[:sort_expired] == "true"
-      @tasks = Task.over
+      @tasks = @tasks.over
     elsif params[:sort_expired] == "false"
-      @tasks = Task.recent
+      @tasks = @tasks.recent
     end
 
     if params[:task].present?
