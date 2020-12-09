@@ -21,5 +21,6 @@ FactoryBot.define do
     content { 'test_content_3' }
     dead_line { DateTime.now + 3.days }
     status { '未着手' }
+    priority { 0 }
   end
 end

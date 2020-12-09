@@ -39,11 +39,10 @@ RSpec.describe 'タスク管理機能', type: :system do
   describe '検索機能' do
     context 'タイトルであいまい検索をした場合' do
       it "検索キーワードを含むタスクが絞り込まれる" do
-        visit tasks_path
-        fill_in :task_title, with: 'test_title_1'
+        fill_in :task_title, with: 'test_title_3'
         click_on "検索する"
         task_list = all('.task_row')
-        expect(page).to have_content 'test_content_1'
+        expect(page).to have_content 'test_content_3'
         expect(page).not_to have_content 'test_content_2'
       end
     end
