@@ -1,10 +1,11 @@
 <h1>Task詳細画面</h1>
-<p><%=t('activerecord.attributes.task.title') %>: <%= @task.title %></p>
-<p><%=t('activerecord.attributes.task.content') %>:<%= @task.content %></p>
-<p><%=t('activerecord.attributes.task.created_at') %>:<%=@task.created_at.strftime('%Y/%m/%d %H:%M')%></p>
-<p><%=t('activerecord.attributes.task.dead_line') %>:<%= @task.dead_line.strftime('%Y/%m/%d %H:%M') %></p>
-<p><%=t('activerecord.attributes.task.status') %>:<%= @task.status %></p>
-<p><%=t('activerecord.attributes.task.priority') %>:<%=@task.priority %></p>
+<div class="show_path">
+  <h4><%=t('activerecord.attributes.task.title') %>: <%= @task.title %></h4>
+  <h4><%=t('activerecord.attributes.task.content') %>:<%= @task.content %></h4>
+  <h4><%=t('activerecord.attributes.task.created_at') %>:<%=@task.created_at.strftime('%Y/%m/%d %H:%M')%></h4>
+  <h4><%=t('activerecord.attributes.task.dead_line') %>:<%= @task.dead_line.strftime('%Y/%m/%d %H:%M') %></h4>
+  <h4><%=t('activerecord.attributes.task.status') %>:<%= @task.status %></h4>
+  <h4><%=t('activerecord.attributes.task.priority') %>:<%=@task.priority %></h4>
 
-
-<%= link_to t('link_to.models.task.back'), tasks_path %>
+  <%= link_to t('link_to.models.task.back'), tasks_path, class:'btn btn-danger' %>
+</div>

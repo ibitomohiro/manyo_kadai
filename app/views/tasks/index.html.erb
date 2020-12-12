@@ -1,8 +1,8 @@
-
+<h1>Taskを検索する</h1>
 <div class="container">
-  <div class="col-md-4">
+  <div class="col-md-6 task_index">
     <p id="notice"><%= notice %></p>
-    <h1>Taskを検索する</h1>
+
     <p><%=form_with(model: Task.new, url: tasks_path, method: :get, local: true) do |f| %></p>
         <div class="form-group">
           <%= f.label :search_status, t('sort.search_status') %>
@@ -57,7 +57,8 @@
 </table>
 <br>
 
-<%= link_to t('link_to.models.task.new'), new_task_path %>
-<%= paginate @tasks %>
+<div class="text-center">
+  <%= paginate @tasks %>
+</div>
 
 

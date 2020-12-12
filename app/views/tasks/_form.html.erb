@@ -9,29 +9,32 @@
       </ul>
     </div>
   <% end %>
-  <div class = "task-title">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+  <div class="col-md-4 new_form">
 
-  <div class="task-content">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
+    <div class = "task-title">
+      <%= f.label :title %>
+      <%= f.text_field :title, class:'form-control col-md-6' %>
+    </div>
 
-  <div class="dead_line">
-    <%= f.label :dead_line %>
-    <%= f.datetime_select :dead_line %>
-  </div>
+    <div class="task-content">
+      <%= f.label :content %>
+      <%= f.text_area :content, class:'form-control col-md-6' %>
+    </div>
 
-  <div class ="status">
-    <%= f.label :status  %>
-    <%= f.select :status, ["未着手", "着手中", "完了"] %>
-  </div>
+    <div class="dead_line">
+      <%= f.label :dead_line %>
+      <%= f.datetime_select :dead_line, class:'form-control col-md-6' %>
+    </div>
 
-  <div class="priority">
-    <%= f.label :priority %>
-    <%= f.select :priority, ["高", "中","低"] %>
+    <div class ="status">
+      <%= f.label :status  %>
+      <%= f.select :status, ["未着手", "着手中", "完了"], class:'form-control col-md-6' %>
+    </div>
+
+    <div class="priority">
+      <%= f.label :priority %>
+      <%= f.select :priority, ["高", "中","低"], class:'form-control col-md-6' %>
+    </div>
+    <%= f.submit class:'btn btn-primary' %>
+  <% end %>
   </div>
-  <%= f.submit %>
-<% end %>
