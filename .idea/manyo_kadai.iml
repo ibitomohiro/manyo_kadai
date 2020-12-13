@@ -198,6 +198,27 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="bcrypt (vbundled(3.1.16)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/spec" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/lib" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/spec" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/spec" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="better_errors (vbundled(2.9.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
@@ -770,21 +791,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="loofah (vbundled(2.7.0)) [path][gem]" type="rubylib">
+      <library name="loofah (vbundled(2.8.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/loofah-2.7.0/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/loofah-2.7.0/benchmark" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/loofah-2.8.0/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/loofah-2.7.0/lib" />
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/loofah-2.7.0/benchmark" />
+          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/loofah-2.8.0/lib" />
         </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vender/bundle/ruby/2.6.0/gems/loofah-2.7.0/benchmark" />
-        </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
