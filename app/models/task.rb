@@ -9,4 +9,5 @@ class Task < ApplicationRecord
   scope :search_status, -> (status) {where(status: status)}
   scope :search_priority, -> (priority){ where(priority: priority) }
   enum priority: { 高: 0, 中:1, 低:2 }
+  belongs_to :user
 end
