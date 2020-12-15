@@ -9,12 +9,19 @@
       </button>
       <a class="navbar-brand" href="#">タスク作成アプリ</a>
     </div>
-
-    <div class="collapse navbar-collapse" id="navbarEexample1">
       <ul class="nav navbar-nav">
         <li><%= link_to "タスク登録", new_task_path %></li>
         <li><%= link_to "タスク一覧", tasks_path %></li>
         <li><a href="#">メニューＣ</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+          <li><%= link_to "Profile", user_path(current_user.id) %></li>
+          <li><%= link_to "Log out ", session_path(current_user.id), method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign up", new_user_path %></li>
+          <li><%= link_to "Log in", new_session_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>
