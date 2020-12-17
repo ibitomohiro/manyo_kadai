@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in_user
   def index
     # @tasks = Task.all
     @tasks = Task.page(params[:page]).per(5)
@@ -17,17 +17,6 @@ class TasksController < ApplicationController
         @tasks = @tasks.search_priority(params[:task][:priority])
       end
     end
-
-    # if params[:search_title].present? && params[:search_status].present?
-    #   @tasks = Task.search_title(params[:search_title]).search_status(params[:search_status])
-    #
-    # elsif params[:search_title].present?
-    #   @tasks = Task.search_title(params[:search_title])
-    #   # @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%")
-    # elsif params[:search_status].present?
-    #   @tasks = Task.search_status(params[:search_status])
-    #   # @tasks = Task.where(status: params[:search_status])
-    # end
   end
 
   def new
@@ -53,6 +42,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create(task_params)
+    @task = current_user.tasks.build(task_params)
     if @task.save
     # binding.pry
     flash[:notice] = 'Taskの投稿に成功しました！'
@@ -77,5 +67,4 @@ class TasksController < ApplicationController
   def set_task
     @task = Task.find(params[:id])
   end
-
 end
