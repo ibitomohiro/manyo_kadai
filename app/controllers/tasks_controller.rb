@@ -33,7 +33,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      flash[:notice] = "Taskの編集をしました！"
+      flash[:notice] = I18n.t('notice.task_is_updated')
       redirect_to tasks_path
     else
       render :edit
@@ -45,7 +45,7 @@ class TasksController < ApplicationController
     @task = current_user.tasks.build(task_params)
     if @task.save
     # binding.pry
-    flash[:notice] = 'Taskの投稿に成功しました！'
+    flash[:notice] = I18n.t('notice.task_is_posted')
     redirect_to tasks_path
     else
       render :new
@@ -54,7 +54,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    flash[:notice] = "Taskを削除しました！"
+    flash[:notice] = I18n.t('notice.task_is_deleted')
     redirect_to tasks_path
   end
 

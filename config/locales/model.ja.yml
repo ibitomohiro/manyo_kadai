@@ -20,6 +20,15 @@ ja:
     search_title: タイトルで検索
     search_priority: 優先順位で検索
 
+  notice:
+    task_is_posted: タスクを新規作成しました！
+    task_is_updated: タスクの編集に成功しました！
+    comfirm_task_delete: タスクを削除しますか？
+    task_is_deleted: タスクを削除しました！
+    you_failed_to_log_in: ログインに失敗しました。
+    you_logged_out: ログアウトしました。
+
+
 
 
   activerecord:
