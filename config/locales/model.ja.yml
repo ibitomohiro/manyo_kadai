@@ -27,6 +27,8 @@ ja:
     task_is_deleted: タスクを削除しました！
     you_failed_to_log_in: ログインに失敗しました。
     you_logged_out: ログアウトしました。
+    please_log_in: ログインをして下さい
+    only_correct_user_have_access: 正しいユーザのみがアクセスできます。
 
 
 
