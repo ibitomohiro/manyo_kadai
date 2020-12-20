@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user
   def index
-    # @tasks = Task.all
+    @tasks = current_user.tasks
     @tasks = Task.page(params[:page]).per(5)
     if params[:sort_expired] == "true"
       @tasks = @tasks.over
@@ -41,8 +41,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
-    @task = current_user.tasks.build(task_params)
+    @task = current_user.tasks.new(task_params)
     if @task.save
     # binding.pry
     flash[:notice] = I18n.t('notice.task_is_posted')
@@ -65,6 +64,6 @@ class TasksController < ApplicationController
   end
 
   def set_task
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
   end
 end
