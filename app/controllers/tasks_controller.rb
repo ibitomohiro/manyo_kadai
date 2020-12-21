@@ -1,9 +1,11 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in_user
+  before_action :login_require
   def index
     @tasks = current_user.tasks
-    @tasks = Task.page(params[:page]).per(5)
+
+    @tasks = @tasks.page(params[:page]).per(5)
+    # binding.pry
     if params[:sort_expired] == "true"
       @tasks = @tasks.over
     elsif params[:sort_expired] == "false"
@@ -41,9 +43,9 @@ class TasksController < ApplicationController
   end
 
   def create
+    #current_userのuser_idを入れる
     @task = current_user.tasks.new(task_params)
     if @task.save
-    # binding.pry
     flash[:notice] = I18n.t('notice.task_is_posted')
     redirect_to tasks_path
     else

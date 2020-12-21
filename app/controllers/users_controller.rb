@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  # before_action :logged_in_user, only:[:create, :show]
-  # before_action :correct_user, only:[:create, :show]
+  before_action :login_require, only:[:show]
+  before_action :correct_user, only:[:show ]
   def new
     if logged_in?
       redirect_to user_path(current_user.id)
