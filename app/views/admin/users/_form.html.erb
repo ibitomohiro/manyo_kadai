@@ -1,5 +1,5 @@
 <%= form_with(model: [:admin, @user], local:true) do |f| %>
-
+<div class="col-md-4 new_form">
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
@@ -20,4 +20,5 @@
     <%= f.password_field :password_confirmation, class: 'form-control' %>
   </div>
   <%=f.submit 'Register new user', class: 'btn btn-primary' %>
+</div>
 <% end %>
