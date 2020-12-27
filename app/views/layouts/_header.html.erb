@@ -18,6 +18,11 @@
         <% if logged_in? %>
           <li><%= link_to "Profile", user_path(current_user.id) %></li>
           <li><%= link_to "Log out ", session_path(current_user.id), method: :delete %></li>
+          <%# binding.pry %>
+          <% if current_user.admin? %>
+            <li><%= link_to "管理者用ユーザー一覧", admin_users_path %></li>
+            <li><%= link_to "管理者ユーザー作成", new_admin_user_path %></li>
+          <% end %>
         <% else %>
           <li><%= link_to "Sign up", new_user_path %></li>
           <li><%= link_to "Log in", new_session_path %></li>
