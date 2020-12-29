@@ -1,3 +1,5 @@
 <h1><%= @user.name %>のページ</h1>
-<p>メールアドレス: <%= @user.email %></p>
-<%= link_to 'admin user index', admin_users_path %>
+<div class="text-center">
+  <p>メールアドレス: <%= @user.email %></p>
+  <%= link_to 'ユーザー管理画面', admin_users_path, class: 'btn btn-primary' %>
+</div>
