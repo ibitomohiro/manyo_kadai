@@ -52,4 +52,64 @@ RSpec.feature 'ユーザー登録のテスト', type: :system do
       end
     end
   end
+  describe "管理者のテスト" do
+    before  do
+      @user = FactoryBot.create(:user)
+      @admin_user = FactoryBot.create(:admin_user)
+      visit new_session_path
+      fill_in 'session_email', with: 'test_user@co.jp'
+      fill_in 'session_password', with: 'foobar'
+      click_button 'Log in'
+    end
+    context '管理ユーザーが管理画面にアクセスしたとき' do
+      it '管理画面にアクセスができる' do
+        visit admin_users_path
+        expect(page).to have_content '管理画面のユーザー　一覧画面だよ！'
+      end
+    end
+    context '一般ユーザーが管理画面にアクセスしたとき' do
+      it '管理画面にアクセスができない' do
+        click_on 'Log out'
+        fill_in 'session_email', with: 'test_user@co.jp'
+        fill_in 'session_password', with: 'foobar'
+        expect(page).not_to have_content '管理画面のユーザー　一覧画面だよ！'
+      end
+    end
+    context '管理ユーザーが新規ユーザーの登録をしたとき' do
+      it '新規ユーザーの登録ができる' do
+        visit new_admin_user_path
+        fill_in 'user_name', with: 'sample_user'
+        fill_in 'user_email', with: 'sample_user@co.jp'
+        fill_in 'user_password', with: 'foobar'
+        fill_in 'user_password_confirmation', with: 'foobar'
+        click_button 'Register new user'
+        expect(page).to have_content 'sample_user@co.jp'
+      end
+    end
+    context '管理ユーザーが詳細画面にアクセスしたとき' do
+      it '詳細画面にアクセスできる' do
+        visit admin_user_path(@user.id)
+        expect(page).to have_content 'test_user@co.jp'
+      end
+    end
+    context '管理ユーザーがユーザーの編集をしたとき' do
+      it 'ユーザーの編集ができる' do
+        visit edit_admin_user_path(@user.id)
+        fill_in 'user_name', with: 'edit_user'
+        fill_in 'user_email', with: 'edit_user@co.jp'
+        fill_in 'user_password', with: 'foobar'
+        fill_in 'user_password_confirmation', with: 'foobar'
+        click_button 'Register new user'
+        expect(page).to have_content 'edit_user@co.jp'
+      end
+    end
+    context '管理ユーザーがユーザーの削除をしたとき' do
+      it 'ユーザーの削除ができる' do
+        visit admin_users_path
+        click_on 'ユーザーを削除する', match: :first
+        page.driver.browser.switch_to.alert.accept
+        expect(page).not_to have_content 'test_user'
+      end
+    end
+  end
 end
