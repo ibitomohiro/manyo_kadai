@@ -34,7 +34,7 @@ class Admin::UsersController < ApplicationController
     if @user.destroy
       redirect_to admin_users_path, notice: "ユーザーを削除しました！"
     else
-      redirect_to admin_users_path, notice: '管理者は削除できません'
+      redirect_to admin_users_path, notice: '最後の管理者は削除できません'
     end
   end
 

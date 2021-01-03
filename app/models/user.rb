@@ -11,8 +11,9 @@ class User < ApplicationRecord
   private
   def ensure_last_admin
     if self.admin == true
-      errors.add :base, '管理者は削除できません'
+      if User.all.where(admin: true).count == 1
       throw (:abort)
+      end
     end
   end
 end
