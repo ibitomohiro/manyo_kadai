@@ -82,7 +82,7 @@ RSpec.feature 'ユーザー登録のテスト', type: :system do
         fill_in 'user_email', with: 'sample_user@co.jp'
         fill_in 'user_password', with: 'foobar'
         fill_in 'user_password_confirmation', with: 'foobar'
-        click_button 'Register new user'
+        click_on 'ユーザーを登録する'
         expect(page).to have_content 'sample_user@co.jp'
       end
     end
@@ -99,7 +99,7 @@ RSpec.feature 'ユーザー登録のテスト', type: :system do
         fill_in 'user_email', with: 'edit_user@co.jp'
         fill_in 'user_password', with: 'foobar'
         fill_in 'user_password_confirmation', with: 'foobar'
-        click_button 'Register new user'
+        click_on 'ユーザーを登録する'
         expect(page).to have_content 'edit_user@co.jp'
       end
     end

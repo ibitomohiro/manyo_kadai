@@ -16,7 +16,7 @@
   </div>
 
   <div class="form-check">
-    <%= f.label :admin, class: 'form-check-label'  %>
+    <%= f.label :admin, t('activerecord.attributes.user.admin'), class: 'form-check-label'  %>
     <%= f.check_box :admin, class: 'form-check-input' %>
   </div>
 
@@ -24,6 +24,6 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
   </div>
-  <%=f.submit 'Register new user', class: 'btn btn-primary' %>
+  <%=f.submit t('view.Register_new_user'), class: 'btn btn-primary' %>
 </div>
 <% end %>

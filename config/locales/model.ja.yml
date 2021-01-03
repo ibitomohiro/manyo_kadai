@@ -15,6 +15,10 @@ ja:
         back: 戻る
         dead_line: 終了期順が近い順番に並び替える
         created_at: 投稿時間が新しい順番に並び替える
+      admin_user:
+        show: ユーザー編集画面
+        delete: ユーザーを削除する
+        index: 管理ユーザー一覧
   sort:
     search_status: ステータスで検索
     search_title: タイトルで検索
@@ -29,6 +33,9 @@ ja:
     you_logged_out: ログアウトしました。
     please_log_in: ログインをして下さい
     only_correct_user_have_access: 正しいユーザのみがアクセスできます。
+  view:
+    Register_new_user: ユーザーを登録する
+
 
 
 
@@ -53,3 +60,4 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+        admin: 管理者
