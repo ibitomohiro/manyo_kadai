@@ -23,3 +23,12 @@ h1{
     margin-top: 5rem;
     margin-left: 77rem;
 }
+/*sesisons form*/
+.session.row{
+    padding-top: 2rem;
+    margin-top: 4rem;
+}
+/*new user form*/
+.new-user.row {
+    margin-top: 4rem;
+}
