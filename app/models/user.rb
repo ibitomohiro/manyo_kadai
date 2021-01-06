@@ -8,6 +8,7 @@ class User < ApplicationRecord
   validates :password, presence:true, length: { minimum: 6 }, allow_nil: true
   has_secure_password
   has_many :tasks, dependent: :destroy
+  enum admin: {admin: true, not_admin: false }
 
   private
   def ensure_last_admin
