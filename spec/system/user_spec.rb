@@ -35,7 +35,7 @@ RSpec.feature 'ユーザー登録のテスト', type: :system do
     end
     context '自分の詳細ページのテスト' do
       it '詳細ページに飛べること' do
-        click_on 'Profile'
+        click_on 'プロフィール'
         expect(page).to have_content 'test_user@co.jp'
       end
     end
@@ -47,7 +47,7 @@ RSpec.feature 'ユーザー登録のテスト', type: :system do
     end
     context 'ログアウトをしたとき' do
       it 'ログアウトができる' do
-        click_on 'Log out'
+        click_on 'ログアウト'
         expect(page).to have_content 'ログアウトしました。'
       end
     end
@@ -57,19 +57,20 @@ RSpec.feature 'ユーザー登録のテスト', type: :system do
       @user = FactoryBot.create(:user)
       @admin_user = FactoryBot.create(:admin_user)
       visit new_session_path
-      fill_in 'session_email', with: 'test_user@co.jp'
+      fill_in 'session_email', with: 'admin_user@co.jp'
       fill_in 'session_password', with: 'foobar'
       click_button 'Log in'
     end
     context '管理ユーザーが管理画面にアクセスしたとき' do
       it '管理画面にアクセスができる' do
         visit admin_users_path
+        click_on '管理者用ユーザー一覧'
         expect(page).to have_content '管理画面のユーザー　一覧画面だよ！'
       end
     end
     context '一般ユーザーが管理画面にアクセスしたとき' do
       it '管理画面にアクセスができない' do
-        click_on 'Log out'
+        click_on 'ログアウト'
         fill_in 'session_email', with: 'test_user@co.jp'
         fill_in 'session_password', with: 'foobar'
         expect(page).not_to have_content '管理画面のユーザー　一覧画面だよ！'
@@ -84,12 +85,12 @@ RSpec.feature 'ユーザー登録のテスト', type: :system do
         fill_in 'user_password_confirmation', with: 'foobar'
         click_on 'ユーザーを登録する'
         expect(page).to have_content 'sample_user@co.jp'
+        # binding.pry
       end
     end
     context '管理ユーザーが詳細画面にアクセスしたとき' do
       it '詳細画面にアクセスできる' do
-        visit admin_user_path(@user.id)
-        expect(page).to have_content 'test_user@co.jp'
+        visit admin_user_path(@admin_user.id)
       end
     end
     context '管理ユーザーがユーザーの編集をしたとき' do

@@ -15,9 +15,9 @@ require 'rails_helper'
       end
       context 'タスクのタイトルと詳細に内容が記載されている場合' do
         it 'バリデーションが通る' do
-          user = FactoryBot.create(:user)
-          task = FactoryBot.create(:task, user: user)
-          expect(task).to be_valid
+          @user = FactoryBot.create(:user)
+          @task = FactoryBot.create(:task, user: @user)
+          expect(@task).to be_valid
         end
       end
     end
@@ -25,9 +25,9 @@ require 'rails_helper'
   describe '検索機能' do
     # 必要に応じて、テストデータの内容を変更して構わない
     before do
-      user = FactoryBot.create(:user)
-      @task = FactoryBot.create(:task, user: user)
-      @second_task = FactoryBot.create(:second_task, user: user)
+      @user = FactoryBot.create(:user)
+      @task = FactoryBot.create(:task, user: @user)
+      @second_task = FactoryBot.create(:second_task, user: @user)
     end
     context 'scopeメソッドでタイトルのあいまい検索をした場合' do
       it "検索キーワードを含むタスクが絞り込まれる" do
