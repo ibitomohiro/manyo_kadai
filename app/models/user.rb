@@ -8,12 +8,12 @@ class User < ApplicationRecord
   validates :password, presence:true, length: { minimum: 6 }, allow_nil: true
   has_secure_password
   has_many :tasks, dependent: :destroy
-  enum admin: {admin: true, not_admin: false }
+
 
   private
   def ensure_last_admin
-    if self.admin == "admin"
-      if User.all.where(admin: "admin").count == 1
+    if self.admin == true
+      if User.all.where(admin: true).count == 1
       throw (:abort)
       end
     end
