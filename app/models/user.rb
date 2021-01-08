@@ -12,8 +12,8 @@ class User < ApplicationRecord
 
   private
   def ensure_last_admin
-    if self.admin == true
-      if User.all.where(admin: true).count == 1
+    if self.admin == "admin"
+      if User.all.where(admin: "admin").count == 1
       throw (:abort)
       end
     end
