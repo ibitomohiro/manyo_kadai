@@ -15,10 +15,28 @@ ja:
         back: 戻る
         dead_line: 終了期順が近い順番に並び替える
         created_at: 投稿時間が新しい順番に並び替える
+      admin_user:
+        show: ユーザー編集画面
+        delete: ユーザーを削除する
+        index: 管理ユーザー一覧
   sort:
     search_status: ステータスで検索
     search_title: タイトルで検索
     search_priority: 優先順位で検索
+
+  notice:
+    task_is_posted: タスクを新規作成しました！
+    task_is_updated: タスクの編集に成功しました！
+    comfirm_task_delete: タスクを削除しますか？
+    task_is_deleted: タスクを削除しました！
+    you_failed_to_log_in: ログインに失敗しました。
+    you_logged_out: ログアウトしました。
+    please_log_in: ログインをして下さい
+    only_correct_user_have_access: 正しいユーザのみがアクセスできます。
+  view:
+    Register_new_user: ユーザーを登録する
+
+
 
 
 
@@ -42,3 +60,4 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+        admin: 管理者

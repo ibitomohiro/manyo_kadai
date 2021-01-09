@@ -1,9 +1,11 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
-
+  before_action :login_require
   def index
-    # @tasks = Task.all
-    @tasks = Task.page(params[:page]).per(5)
+    @tasks = current_user.tasks
+
+    @tasks = @tasks.page(params[:page]).per(5)
+    # binding.pry
     if params[:sort_expired] == "true"
       @tasks = @tasks.over
     elsif params[:sort_expired] == "false"
@@ -17,17 +19,6 @@ class TasksController < ApplicationController
         @tasks = @tasks.search_priority(params[:task][:priority])
       end
     end
-
-    # if params[:search_title].present? && params[:search_status].present?
-    #   @tasks = Task.search_title(params[:search_title]).search_status(params[:search_status])
-    #
-    # elsif params[:search_title].present?
-    #   @tasks = Task.search_title(params[:search_title])
-    #   # @tasks = Task.where('title LIKE ?', "%#{params[:search_title]}%")
-    # elsif params[:search_status].present?
-    #   @tasks = Task.search_status(params[:search_status])
-    #   # @tasks = Task.where(status: params[:search_status])
-    # end
   end
 
   def new
@@ -44,7 +35,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      flash[:notice] = "Taskの編集をしました！"
+      flash[:notice] = I18n.t('notice.task_is_updated')
       redirect_to tasks_path
     else
       render :edit
@@ -52,10 +43,10 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    #current_userのuser_idを入れる
+    @task = current_user.tasks.new(task_params)
     if @task.save
-    # binding.pry
-    flash[:notice] = 'Taskの投稿に成功しました！'
+    flash[:notice] = I18n.t('notice.task_is_posted')
     redirect_to tasks_path
     else
       render :new
@@ -64,7 +55,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    flash[:notice] = "Taskを削除しました！"
+    flash[:notice] = I18n.t('notice.task_is_deleted')
     redirect_to tasks_path
   end
 
@@ -75,7 +66,6 @@ class TasksController < ApplicationController
   end
 
   def set_task
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
   end
-
 end
