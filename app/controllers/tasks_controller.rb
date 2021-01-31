@@ -20,11 +20,11 @@ class TasksController < ApplicationController
       elsif params[:task][:status].present?
         @tasks = @tasks.search_status(params[:task][:status])
       elsif params[:task][:label_id].present?
-      @tasks.joins(:labels).where(labels: { id: params[:label_id] })
-      end
-      if params[:task][:priority].present?
         @labelling = Labelling.where(label_id: params[:task][:label_id]).pluck(:task_id)
         @tasks = @tasks.where(id: @labelling)
+      end
+      if params[:task][:priority].present?
+        @tasks = @tasks.search_priority(params[:task][:priority])
       end
     end
   end

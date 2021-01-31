@@ -7,6 +7,11 @@ FactoryBot.define do
     content { 'test_content_1' }
     dead_line { DateTime.now }
     status { '完了' }
+
+    # after(:build) do |task|
+    #   @label = create(:label)
+    #   task.labellings << build(:labelling, task: task, label: @label)
+    # end
   end
   # 作成するテストデータの名前を「second_task」とします
   # （存在しないクラス名の名前をつける場合、オプションで「このクラスのテストデータにしてください」と指定します）
