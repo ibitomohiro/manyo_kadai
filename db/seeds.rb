@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 9.times do |n|
-  username = Faker::Games::Pokemon.name
-  email = Faker::Internet.unique.email
+  name = Faker::Games::Pokemon.name
+  email = Faker::Internet.email
   password = 'foobar'
-  User.create!(name: username,
+  User.create!(name: name,
                email: email,
                password: password,
                password_confirmation: password,
@@ -50,6 +50,6 @@ Label.create!(
     name: '運動'
 )
 
-3.times do |n|
+20.times do |n|
   Labelling.create!(task_id: rand(1..10), label_id: rand(1..3))
 end
