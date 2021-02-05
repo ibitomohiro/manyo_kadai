@@ -47,6 +47,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :development do
@@ -57,7 +58,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
-  gem 'faker'
+  # gem 'faker'
   gem 'launchy'
 end
 
