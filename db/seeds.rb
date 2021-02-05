@@ -28,8 +28,8 @@ User.create!(name: 'admin',
 
 
 20.times do |n|
-    title = Faker::Lorem.characters(number: 5)
-    content = Faker::Lorem.sentence(word_count: 3)
+    title = Faker::Job.title
+    content = Faker::Job.field
     dead_line = Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)
     user_id = rand(1..10)
     Task.create!(title: title,
@@ -40,16 +40,6 @@ User.create!(name: 'admin',
                  user_id: user_id)
 end
 
-Label.create!(
-    name: '仕事'
-)
-Label.create!(
-    name: 'プライベート'
-)
-Label.create!(
-    name: '運動'
-)
-
-20.times do |n|
-  Labelling.create!(task_id: rand(1..10), label_id: rand(1..3))
+3.times do |n|
+  Label.create!(name: "label_#{n}")
 end
