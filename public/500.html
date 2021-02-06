@@ -4,23 +4,51 @@
   <title>Internal Server Error (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    .error {
-      padding-top: 16%
+    *{
+      transition: all 0.6s;
     }
-    p{
+
+    html {
+      height: 100%;
+    }
+
+    body{
+      font-family: 'Lato', sans-serif;
+      color: #888;
+      margin: 0;
+    }
+
+    #main{
+      display: table;
+      width: 100%;
+      height: 100vh;
       text-align: center;
     }
-    img{
-      display: block;
-      margin: 0 auto;
+
+    .fof{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .fof h1{
+      font-size: 50px;
+      display: inline-block;
+      padding-right: 12px;
+      animation: type .5s alternate infinite;
+    }
+
+    @keyframes type{
+      from{box-shadow: inset -3px 0px 0px #888;}
+      to{box-shadow: inset -3px 0px 0px transparent;}
     }
   </style>
 </head>
 <body>
 <!-- This file lives in public/500.html -->
-<div class="error">
-  <img src="/500.png">
-  <p>Internal Server Error</p>
+<div id="main">
+  <div class="fof">
+    <h1>Error 500</h1>
+  </div>
 </div>
 </body>
 </html>
