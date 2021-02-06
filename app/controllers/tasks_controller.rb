@@ -12,19 +12,22 @@ class TasksController < ApplicationController
     end
 
     if params[:task].present?
-      if params[:task][:title].present? && params[:task][:status].present?
-      @tasks = @tasks.search_title(params[:task][:title])
-      @tasks = @tasks.search_status(params[:task][:status])
-      elsif params[:task][:title].present?
-        @tasks = @tasks.search_title(params[:task][:title])
-      elsif params[:task][:status].present?
-        @tasks = @tasks.search_status(params[:task][:status])
-      elsif params[:task][:label_id].present?
-        @labelling = Labelling.where(label_id: params[:task][:label_id]).pluck(:task_id)
-        @tasks = @tasks.where(id: @labelling)
-      end
       if params[:task][:priority].present?
         @tasks = @tasks.search_priority(params[:task][:priority])
+      end
+
+      if params[:task][:title].present? && params[:task][:status].present?
+        @tasks = @tasks.search_title(params[:task][:title])
+        @tasks = @tasks.search_status(params[:task][:status])
+      elsif params[:task][:title].present?
+          @tasks = @tasks.search_title(params[:task][:title])
+      elsif params[:task][:status].present?
+          @tasks = @tasks.search_status(params[:task][:status])
+      end
+
+      if params[:task][:label_id].present?
+        @labelling = Labelling.where(label_id: params[:task][:label_id]).pluck(:task_id)
+        @tasks = @tasks.where(id: @labelling)
       end
     end
   end
