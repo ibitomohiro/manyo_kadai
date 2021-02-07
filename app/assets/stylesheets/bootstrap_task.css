@@ -32,3 +32,14 @@ h1{
 .new-user.row {
     margin-top: 4rem;
 }
+/*label new*/
+.col-center-block{
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+.label_botton{
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
