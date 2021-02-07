@@ -3,9 +3,8 @@ class TasksController < ApplicationController
   before_action :login_require
   def index
     @tasks = current_user.tasks
-
     @tasks = @tasks.page(params[:page]).per(5)
-    # binding.pry
+    # @tasks = @tasks.joins(:labels).where(labels: {id: params[:label_id]}) if params[:label_id].present?
     if params[:sort_expired] == "true"
       @tasks = @tasks.over
     elsif params[:sort_expired] == "false"
@@ -13,10 +12,22 @@ class TasksController < ApplicationController
     end
 
     if params[:task].present?
-      @tasks = @tasks.search_title(params[:task][:title])
-      @tasks = @tasks.search_status(params[:task][:status])
       if params[:task][:priority].present?
         @tasks = @tasks.search_priority(params[:task][:priority])
+      end
+
+      if params[:task][:title].present? && params[:task][:status].present?
+        @tasks = @tasks.search_title(params[:task][:title])
+        @tasks = @tasks.search_status(params[:task][:status])
+      elsif params[:task][:title].present?
+          @tasks = @tasks.search_title(params[:task][:title])
+      elsif params[:task][:status].present?
+          @tasks = @tasks.search_status(params[:task][:status])
+      end
+
+      if params[:task][:label_id].present?
+        @labelling = Labelling.where(label_id: params[:task][:label_id]).pluck(:task_id)
+        @tasks = @tasks.where(id: @labelling)
       end
     end
   end
@@ -62,7 +73,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :content, :dead_line, :status, :priority)
+    params.require(:task).permit(:title, :content, :dead_line, :status, :priority, label_ids: [])
   end
 
   def set_task

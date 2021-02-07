@@ -35,6 +35,15 @@
       <%= f.label :priority %>
       <%= f.select :priority, ["高", "中","低"], class:'form-control col-md-6' %>
     </div>
+
+    <div class="label">
+      <% Label.all.each do |label| %>
+        <%= f.check_box :label_ids, { multiple:true, checked: label[:checked], disabled: label[:disabled], include_hidden: false }, label[:id] %>
+        <label class="label label-default"><%= label.name %></label>
+      <% end %>
+    </div>
+
+
     <%= f.submit class:'btn btn-primary' %>
   <% end %>
   </div>
