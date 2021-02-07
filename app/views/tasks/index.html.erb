@@ -6,7 +6,7 @@
     <p><%=form_with(model: Task.new, url: tasks_path, method: :get, local: true) do |f| %></p>
         <div class="form-group">
           <%= f.label :search_status, t('sort.search_status') %>
-          <%= f.select :status, ["未着手", "着手中", "完了"], {include_blank:true, selected: "未着手"} %>
+          <%= f.select :status, ["未着手", "着手中", "完了"], {include_blank:true, selected: 0} %>
         </div>
         <div class="form-group">
           <%= f.label :search_title, t('sort.search_title') %>
@@ -14,11 +14,11 @@
         </div>
         <div class="form-group">
           <%= f.label :priority, t('sort.search_priority') %>
-          <%= f.select :priority, ["高", "中", "低"], {include_blank:true, selected: "高"} %>
+          <%= f.select :priority, ["高", "中", "低"], {include_blank:true, selected: 0} %>
         </div>
         <div class="form-group">
           <%= f.label :label_name, "ラベル検索" %>
-          <%= f.select :label_id, Label.all.collect.pluck(:name, :id), include_blank: true, selected: 1 %>
+          <%= f.select :label_id, Label.all.collect.pluck(:name, :id), include_blank: true, selected: 0 %>
         </div>
         <%= f.submit "検索する", class: "btn btn-primary" %>
       <% end %>
